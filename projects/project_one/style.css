@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+
+}
+
+body {
+    min-height: 100vh;
+    font-family: Roboto;
+    color: white;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+}
+
+.stop-watch-box {
+    background-image: url(/Portfolio\ Website/images/beach.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 100dvh;
+}
+
+.stop-watch {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(255, 255, 255, 0.219);
+    backdrop-filter: blur(5px);
+    margin: 10em 32em 0em 32em;
+    padding: 1em;
+    border-radius: 20px;
+    box-shadow: 10px 10px 20px rgba(255, 255, 255, 0.2);
+}
+
+.stop-watch button {
+    color: white;
+    border: none;
+    border-radius: 20px;
+    padding: .5em 1em;
+    font-size: 30px;
+    margin: .5em .2em;
+    border-width: 5px;
+    font-weight: bolder;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.2);
+}
+
+.title {
+    font-size: 70px;
+    text-shadow: 10px 10px 10px rgba(0, 0, 0, 0.2);
+}
+
+#display {
+    font-size: 85px;
+    text-shadow: 10px 10px 10px rgba(0, 0, 0, 0.2);
+}
+
+#start {
+    background-color: green;
+    transition: background-color .2s ease;
+}
+
+#start:hover {
+    background-color: rgb(1, 83, 1);
+}
+
+#stop {
+    background-color: rgb(226, 3, 3);
+    transition: background-color .2s ease;
+}
+
+#stop:hover {
+    background-color: rgb(151, 0, 0);
+}
+
+#reset {
+    background-color: rgb(187, 12, 47);
+    transition: background-color .2s ease;
+}
+
+#reset:hover {
+    background-color: rgb(126, 11, 34);
+}
