@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Personal Dashboard</title>
     <link rel="stylesheet" href="personal_dashboard_style.css">
+    <link rel="icon" href="/icons/Logo.png">
 </head>
 
 <body>
@@ -13,10 +14,16 @@
     <header>
         <div class="navigation-bar-box">
             <nav class="navigation-bar">
-                <a href="inedx.html">Home</a>
-                <a class="navigation-active" ::backdrop href="personal_dashboard.html">Personal Dashboard</a>
-                <a id="navigation-icon" href="#"><img id="icons" src="/Portfolio Website/icons/setting_2.png"
-                        alt="Setting Cog Wheel"></a>
+                <div class="left">
+                    <a href="/index.html">Portfolio Website</a>
+                </div>
+
+                <div class="right">
+                    <a href="inedx.html">Home</a>
+                    <a class="navigation-active" href="personal_dashboard.html">Personal Dashboard</a>
+                    <a id="navigation-icon" href="#"><img id="nav-icons" src="/icons/setting_2.png"
+                            alt="Setting Cog Wheel"></a>
+                </div>
             </nav>
         </div>
     </header>
@@ -28,7 +35,7 @@
             <div class="dashboard-box-top">
 
                 <div class="to-do-list">
-                    <h2 class="title"><img id="icons" src="/Portfolio Website/icons/check_list.png" alt=""> To-Do List
+                    <h2 class="title"><img id="icons" src="/icons/check_list.png" alt=""> To-Do List
                     </h2>
                     <input type="text" id="text-box" placeholder="Add a new task...">
                     <button class="button">Add</button>
@@ -36,7 +43,7 @@
                 </div>
 
                 <div class="habit-tracker">
-                    <h2 class="title"><img id="icons" src="/Portfolio Website/icons/foot_print.png" alt=""> Habit
+                    <h2 class="title"><img id="icons" src="/icons/foot_print.png" alt=""> Habit
                         Tracker</h2>
                     <input type="text" id="text-box" placeholder="Add a new habit...">
                     <button class="button">Add</button>
@@ -49,7 +56,7 @@
             <div class="dashboard-box-bottom">
 
                 <div class="notes">
-                    <h2 class="title"><img id="icons" src="/Portfolio Website/icons/notes.png" alt=""> Notes</h2>
+                    <h2 class="title"><img id="icons" src="/icons/notes.png" alt=""> Notes</h2>
                     <textarea id="notes-text-box" placeholder="Start writing..."></textarea>
                 </div>
 

@@ -43,7 +43,7 @@ footer {
 .project-section {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    text-align: center;
     padding: 0em 0em 3em 0em;
     background-color: #153e29;
 }
@@ -148,9 +148,29 @@ nav .left a:hover {
 }
 
 .project-section p {
-    margin: 1em 10em 0em 10em;
-    padding: .5em;
+    padding: 1em;
     font-size: 20px;
+}
+
+.project-display {
+    display: grid;
+    margin: 3em 0em 0em 2em;
+    padding: 0em 0em 0em 0em;
+    grid-template-rows: auto;
+    grid-template-columns: 400px 400px;
+    gap: 2em;
+    justify-content: left;
+}
+
+.project-display-item {
+    background-color: #ffffff60;
+    border-radius: 2em 2em 2em 2em;
+}
+
+.project-image {
+    width: 400px;
+    object-fit: contain;
+    border-radius: 2em 2em 0em 0em;
 }
 
 .skill-section h2 {
