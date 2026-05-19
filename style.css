@@ -1,5 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap');
 
+:root {
+    
+    --background-colour-one: #153e29;
+    --background-colour-two: #466f54;
+    --default-text-colour: #fff;
+    --default-hover: #dfe1e167;
+} 
+
 * {
     box-sizing: border-box;
     margin: 0;
@@ -10,7 +18,7 @@
 body {
     min-height: 100vh;
     font-family: Roboto;
-    color: white;
+    color: var(--default-text-colour);
 }
 
 main {
@@ -45,7 +53,7 @@ footer {
     flex-direction: column;
     text-align: center;
     padding: 0em 0em 3em 0em;
-    background-color: #153e29;
+    background-color: var(--background-colour-one);
 }
 
 .skill-section {
@@ -53,20 +61,20 @@ footer {
     flex-direction: column;
     align-items: center;
     padding: 0em 0em 3em 0em;
-    background-color: #466f54;
+    background-color: var(--background-colour-two);
 }
 
 .contacts-section {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    background-color: #153e29;
+    background-color: var(--background-colour-one);
     padding: 1em 2em 1em;
 }
 
 nav {
     display: flex;
-    background-color: #153e29;
+    background-color: var(--background-colour-one);
     align-items: center;
     width: 100%;
     justify-content: space-between;
@@ -78,7 +86,7 @@ nav {
 
 nav .right a,
 nav .left a {
-    color: white;
+    color: var(--default-text-colour);
     font-weight: bold;
     font-size: 20px;
     text-decoration: none;
@@ -88,7 +96,7 @@ nav .left a {
 nav .right a:hover,
 nav .left a:hover {
     transition: background-color .2s ease;
-    background-color: #dfe1e167;
+    background-color: var(--default-hover);
 }
 
 .about-section h1 {
@@ -120,7 +128,7 @@ nav .left a:hover {
 .about-section p {
     margin: 1em 10em 1em 10em;
     padding: .5em;
-    font-size: 20px;
+    font-size: 24px;
     background-color: #ffffff00;
     backdrop-filter: blur(2px);
     border-radius: 10px;
@@ -147,9 +155,14 @@ nav .left a:hover {
     font-size: 36px;
 }
 
+.project-section h3 {
+    font-size: 30px;
+    margin: -.5em 0em -.5em 0em;
+}
+
 .project-section p {
     padding: 1em;
-    font-size: 20px;
+    font-size: 24px;
 }
 
 .project-display {
@@ -157,18 +170,18 @@ nav .left a:hover {
     margin: 3em 0em 0em 2em;
     padding: 0em 0em 0em 0em;
     grid-template-rows: auto;
-    grid-template-columns: 400px 400px;
+    grid-template-columns: 450px 450px;
     gap: 2em;
     justify-content: left;
 }
 
 .project-display-item {
-    background-color: #ffffff60;
+    background-color: var(--background-colour-two);
     border-radius: 2em 2em 2em 2em;
 }
 
 .project-image {
-    width: 400px;
+    width: 450px;
     object-fit: contain;
     border-radius: 2em 2em 0em 0em;
 }
@@ -181,7 +194,7 @@ nav .left a:hover {
 .skill-section p {
     margin: 1em 10em 0em 10em;
     padding: .5em;
-    font-size: 20px;
+    font-size: 24px;
 }
 
 .sendButton {
@@ -190,9 +203,10 @@ nav .left a:hover {
     font-size: 20px;
     font-weight: bold;
     border: none;
-    background-color: #466f54;
+    background-color: var(--background-colour-two);
     border-radius: 10px;
     transition: background-color .2s ease;
+    color: var(--default-text-colour);
 }
 
 .sendButton:hover {
