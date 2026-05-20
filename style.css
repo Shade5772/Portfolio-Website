@@ -1,12 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap');
 
 :root {
-    
+
     --background-colour-one: #153e29;
     --background-colour-two: #466f54;
     --default-text-colour: #fff;
     --default-hover: #dfe1e167;
-} 
+}
 
 * {
     box-sizing: border-box;
@@ -59,9 +59,10 @@ footer {
 .skill-section {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: left;
     padding: 0em 0em 3em 0em;
     background-color: var(--background-colour-two);
+    size: 1;
 }
 
 .contacts-section {
@@ -157,11 +158,11 @@ nav .left a:hover {
 
 .project-section h3 {
     font-size: 30px;
-    margin: -.5em 0em -.5em 0em;
+    margin: 1em 0em 0em 0em;
 }
 
 .project-section p {
-    padding: 1em;
+    padding: 0em 1em 1em 1em;
     font-size: 24px;
 }
 
@@ -189,12 +190,33 @@ nav .left a:hover {
 .skill-section h2 {
     margin-top: 1em;
     font-size: 36px;
+    text-align: center;
 }
 
 .skill-section p {
-    margin: 1em 10em 0em 10em;
+    margin: 1em 1em 0em 1em;
     padding: .5em;
     font-size: 24px;
+}
+
+.skill-section ul {
+    margin: .5em 0em 0em 4em;
+    font-size: 20px;
+}
+
+.skill-display {
+    display: grid;
+    margin: 3em 0em 0em 2em;
+    padding: 0em 0em 0em 0em;
+    grid-template-rows: auto;
+    grid-template-columns: 450px 450px;
+    gap: 2em;
+    justify-content: left;
+}
+
+.skill-display-item {
+    background-color: var(--background-colour-one);
+    border-radius: 2em 2em 2em 2em;
 }
 
 .sendButton {
