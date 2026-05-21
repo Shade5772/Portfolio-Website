@@ -199,20 +199,31 @@ nav .left a:hover {
     border-radius: 2em 2em 0em 0em;
 }
 
-.project-link {
-    color: var(--default-text-colour);
-    text-decoration: none;
-    font-size: 20px;
-}
-
 .overlay {
     position: absolute;
     display: flex;
-    margin: -2.5em 0em 0em 15em;
+    margin: -2.5em 0em 0em 14em;
 }
 
 .overlay img {
     margin: 0em 0em -.25em .25em;
+}
+
+.project-link {
+    color: var(--default-text-colour);
+    text-decoration: none;
+    font-size: 20px;
+    font-family: Poppins;
+    font-weight: bold;
+}
+
+.skill-link {
+    color: var(--default-text-colour);
+    text-decoration: none;
+    font-size: 20px;
+    font-family: Poppins;
+    font-weight: bold;
+    float: right;
 }
 
 .skill-section h2 {
@@ -238,7 +249,7 @@ nav .left a:hover {
     display: grid;
     margin: 3em 0em 0em 2em;
     padding: 0em 0em 0em 0em;
-    grid-template-rows: auto;
+    grid-template-rows: auto auto;
     grid-template-columns: 450px 450px;
     gap: 2em;
     justify-content: left;
@@ -252,6 +263,28 @@ nav .left a:hover {
 
 .skill-display-item:hover {
     transform: scale(1.05);
+}
+
+.programming {
+    grid-row: 2;
+}
+
+.tools {
+    grid-row: 1;
+}
+
+.other {
+    grid-row: 1 / span 2;
+}
+
+.other p img {
+    margin: 0em 0em -.25em .25em;
+}
+
+.skill-icon {
+    width: 52px;
+    padding: 1em 0em 0em 0em;
+    margin: 0em .5em 0em 0em;
 }
 
 .sendButton {
