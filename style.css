@@ -1,11 +1,17 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Cookie&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Lobster&family=Lugrasimo&family=Niconne&family=Playfair:ital,opsz,wght@0,5..1200,300..900;1,5..1200,300..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Cookie&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lobster&family=Lugrasimo&family=Niconne&family=Playfair:ital,opsz,wght@0,5..1200,300..900;1,5..1200,300..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
+
+/* 
+=======================================================
+General Styles
+=======================================================
+*/
 
 :root {
 
-    --background-colour-one: #153e29;
-    --background-colour-two: #466f54;
+    --background-colour-one: #0d1f0d;
+    --background-colour-two: #142014;
     --default-text-colour: #fff;
     --default-hover: #dfe1e167;
 }
@@ -33,46 +39,36 @@ footer {
     flex-direction: column;
 }
 
-.about-section-background {
-    background-image: url(images/background.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
+h1 {
+    padding: .5em;
+    font-size: 4rem;
+    font-weight: normal;
+    font-family: Cormorant Garamond;
 }
 
-.about-section {
-    flex-direction: column;
-    justify-content: center;
-    padding: 6em 0em 0em;
-    display: flex;
-    align-items: center;
-    text-align: center;
-    gap: 1em;
+h2 {
+    font-family: DM Sans;
+    font-size: 3rem;
+    font-weight: normal;
 }
 
-.project-section {
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    padding: 0em 0em 3em 0em;
-    background-color: var(--background-colour-one);
+p {
+    font-family: DM Mono;
+    font-size: 1rem;
+    line-height: 1.6;
+    font-weight: normal;
 }
 
-.skill-section {
-    display: flex;
-    flex-direction: column;
-    align-items: left;
-    padding: 0em 0em 3em 0em;
-    background-color: var(--background-colour-two);
+em {
+    font-style: italic;
+    color: #e8b84b;
 }
 
-.contacts-section {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    background-color: var(--background-colour-one);
-    padding: 1em 2em 1em;
-}
+/* 
+=======================================================
+Navagation Bar
+=======================================================
+*/
 
 nav {
     display: flex;
@@ -89,8 +85,9 @@ nav {
 nav .right a,
 nav .left a {
     color: var(--default-text-colour);
-    font-weight: bold;
-    font-size: 20px;
+    font-weight: normal;
+    font-family: Cormorant Garamond;
+    font-size: 1.25rem;
     text-decoration: none;
     padding: 1em;
 }
@@ -101,24 +98,61 @@ nav .left a:hover {
     background-color: var(--default-hover);
 }
 
-.about-section h1 {
-    padding: .5em;
-    font-size: 50px;
-    font-weight: bold;
-    font-family: Poppins;
+/* 
+=======================================================
+Sections
+=======================================================
+*/
+
+.about-section {
+    flex-direction: column;
+    justify-content: center;
+    padding: 8em 8em 7em 8em;
+    display: flex;
+    background-color: var(--background-colour-one);
+    gap: 1em;
 }
+
+.project-section {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    padding: 2em 8em 3em 8em;
+    background-color: var(--background-colour-one);
+}
+
+.skill-section {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    padding: 5em 8em 3em 8em;
+    background-color: var(--background-colour-two);
+}
+
+.contacts-section {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    background-color: var(--background-colour-one);
+    padding: 1em 2em 1em 2em;
+}
+
+/* 
+=======================================================
+About Section
+=======================================================
+*/
 
 .about-section .profile-picture {
     width: 350px;
-    height: 350px;
-    border-radius: 50%;
+    height: 450px;
+    border-radius: 10px;
     overflow: hidden;
 }
 
 .about-section .profile-picture img {
-    width: 350px;
-    height: 350px;
-    border-radius: 50%;
+    width: 400px;
+    height: 500px;
     object-fit: cover;
     transition: transform 0.4s ease;
     box-shadow: 10px 10px 20px rgba(255, 255, 255, 0.2);
@@ -129,21 +163,37 @@ nav .left a:hover {
 }
 
 .about-section p {
-    margin: 1em 10em 1em 10em;
+    margin: 0em 10em 1em 0em;
     padding: .5em;
-    font-size: 24px;
-    background-color: #ffffff00;
-    backdrop-filter: blur(2px);
-    border-radius: 10px;
+    font-size: 1rem;
+    font-family: DM Sans;
+    line-height: 1.6;
     font-weight: normal;
 }
 
+#hero-heading {
+    margin: -3.1em 0em 0em -.5em;
+}
+
+.hero-text {
+    margin: -20em 0em 0em 25em;
+}
+
+.subtext {
+    color: #c8bfa8;
+    font-family: DM Sans;
+}
+
+    
 .social-links {
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: center;
     padding-bottom: 3em;
+}
+
+.social-links a img {
+    width: 40px;
 }
 
 .social-links a {
@@ -154,55 +204,74 @@ nav .left a:hover {
     transform: scale(1.2);
 }
 
+/* 
+=======================================================
+Projects Section
+=======================================================
+*/
+
 .project-section h2 {
-    margin-top: 1em;
-    font-size: 36px;
-    font-family: Poppins;
+    margin: 1em 0em 0em 0em;
+    font-family: Cormorant Garamond;
 }
 
 .project-section h3 {
-    font-size: 30px;
-    margin: 1em 0em -.5em 0em;
-    font-family: Poppins;
+    font-size: 1.3rem;
+    margin: 1em 0em -1em 0em;
+    text-align: left;
+    font-family: Cormorant Garamond;
 }
 
 .project-section p {
-    padding: 0em 1em 1em 1em;
-    font-size: 24px;
+    padding: 0em 1em 1em 0em;
+    font-size: 0.88rem;
+    line-height: 1.6;
     font-weight: normal;
+}
+
+.project-text {
+    padding: 0em 1em 0em 1em;
 }
 
 .project-display {
     display: grid;
-    margin: 3em 0em 0em 2em;
+    margin: 3em 0em 0em 0em;
     padding: 0em 0em 0em 0em;
-    grid-template-rows: 475px;
-    grid-template-columns: 450px 450px;
+    grid-template-rows: 380px;
+    grid-template-columns: 425px 425px;
     gap: 2em;
     justify-content: left;
 }
 
 .project-display-item {
-    background-color: var(--background-colour-two);
-    border-radius: 2em 2em 2em 2em;
+    background-color: #1e3320;
+    border-radius: 10px;
     position: relative;
     transition: transform 0.3s ease-in-out;
 }
 
 .project-display-item:hover {
-    transform: scale(1.05);
+    transform: translateY(-6px);
 }
 
 .project-image {
-    width: 450px;
+    width: 425px;
     object-fit: contain;
-    border-radius: 2em 2em 0em 0em;
+    border-radius: 10px 10px 0px 0px;
 }
 
 .overlay {
     position: absolute;
     display: flex;
-    margin: -2.5em 0em 0em 14em;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.65);
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
 }
 
 .overlay img {
@@ -217,26 +286,32 @@ nav .left a:hover {
     font-weight: bold;
 }
 
+/* 
+=======================================================
+Skills Section
+=======================================================
+*/
+
+.skill-section h2 {
+    margin: 1em 0em 0em 0em;
+    text-align: left;
+    font-family: Cormorant Garamond;
+}
+
 .skill-link {
     color: var(--default-text-colour);
     text-decoration: none;
-    font-size: 20px;
-    font-family: Poppins;
-    font-weight: bold;
+    font-size: 1.1rem;
+    font-family: DM Sans;
+    font-weight: normal;
     float: right;
 }
 
-.skill-section h2 {
-    margin-top: 1em;
-    font-size: 36px;
-    text-align: center;
-    font-family: Poppins;
-}
-
 .skill-section p {
-    margin: 1em 1em 0em 1em;
     padding: .5em;
-    font-size: 24px;
+    font-size: 1.05rem;
+    font-family: DM Sans;
+    line-height: 1.6;
     font-weight: normal;
 }
 
@@ -247,17 +322,17 @@ nav .left a:hover {
 
 .skill-display {
     display: grid;
-    margin: 3em 0em 0em 2em;
-    padding: 0em 0em 0em 0em;
+    margin: 3em 0em 0em 0em;
     grid-template-rows: auto auto;
-    grid-template-columns: 450px 450px;
-    gap: 2em;
+    grid-template-columns: 425px 425px;
+    gap: 1.5em;
     justify-content: left;
 }
 
 .skill-display-item {
-    background-color: var(--background-colour-one);
-    border-radius: 2em 2em 2em 2em;
+    background-color: #1e3320;
+    border-radius: 10px;
+    padding: 1em;
     transition: transform 0.3s ease-in-out;
 }
 
@@ -282,10 +357,16 @@ nav .left a:hover {
 }
 
 .skill-icon {
-    width: 52px;
+    width: 40px;
     padding: 1em 0em 0em 0em;
     margin: 0em .5em 0em 0em;
 }
+
+/* 
+=======================================================
+Contact Section
+=======================================================
+*/
 
 .sendButton {
     padding: .5em;
@@ -293,14 +374,14 @@ nav .left a:hover {
     font-size: 20px;
     font-weight: bold;
     border: none;
-    background-color: var(--background-colour-two);
+    background-color: #c49a2e;
     border-radius: 10px;
     transition: background-color .2s ease;
     color: var(--default-text-colour);
 }
 
 .sendButton:hover {
-    background-color: #2f573d;
+    background-color: #f5e6b8;
 }
 
 #textInput {
@@ -310,63 +391,4 @@ nav .left a:hover {
     font-weight: bold;
     border: none;
     border-radius: 10px;
-}
-
-@media (max-width: 992px) {
-
-    nav .left a,
-    nav .right a {
-        font-size: 15px;
-    }
-
-    nav {
-        height: 3em;
-    }
-
-    .about-section {
-        padding-top: 4.5em;
-    }
-
-    .about-section .profile-picture img {
-        width: 250px;
-        height: 250px;
-        border-radius: 50%;
-        object-fit: cover;
-    }
-
-    .about-section .profile-picture {
-        width: 250px;
-        height: 250px;
-        border-radius: 50%;
-        overflow: hidden;
-    }
-
-    .about-section h1 {
-        font-size: 33px;
-    }
-
-    .project-section h2,
-    .skill-section h2 {
-        font-size: 32px;
-    }
-
-    .project-section p,
-    .skill-section p,
-    .about-section p {
-        margin: 1em 3em 1em 3em;
-        padding: .5em;
-        font-size: 15px;
-    }
-
-    .social-links img {
-        transform: scale(.9);
-    }
-
-    .social-links {
-        padding-bottom: 1.5em;
-    }
-
-    .social-links a img:hover {
-        transform: scale(1);
-    }
 }
