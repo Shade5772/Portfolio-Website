@@ -1,11 +1,19 @@
+/* 
+=======================================================
+FONT IMPORTS
+=======================================================
+Import Google Fonts used throughout the website
+*/
+
 @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
 
 /* 
 =======================================================
-General Styles
+CSS VARIABLES & GLOBAL COLORS
 =======================================================
+Define reusable color values and design tokens
 */
 
 :root {
@@ -15,6 +23,13 @@ General Styles
     --default-text-colour: #fff;
     --default-hover: #dfe1e167;
 }
+
+/* 
+=======================================================
+RESET & BASE STYLES
+=======================================================
+Universal element resets and body styling
+*/
 
 * {
     box-sizing: border-box;
@@ -39,6 +54,13 @@ footer {
     flex-direction: column;
 }
 
+/* 
+=======================================================
+TYPOGRAPHY - HEADINGS
+=======================================================
+Styling for heading elements (h1, h2)
+*/
+
 h1 {
     padding: .5em;
     font-size: 4rem;
@@ -51,6 +73,13 @@ h2 {
     font-size: 3rem;
     font-weight: normal;
 }
+
+/* 
+=======================================================
+TYPOGRAPHY - BODY & EMPHASIS
+=======================================================
+Styling for paragraph text and emphasized elements
+*/
 
 p {
     font-family: DM Mono;
@@ -66,8 +95,9 @@ em {
 
 /* 
 =======================================================
-Navagation Bar
+NAVIGATION BAR
 =======================================================
+Styling for the fixed header navigation element
 */
 
 nav {
@@ -100,8 +130,9 @@ nav .left a:hover {
 
 /* 
 =======================================================
-Sections
+MAIN SECTIONS - LAYOUT
 =======================================================
+Container styling for major page sections (About, Projects, Skills, Footer)
 */
 
 .about-section {
@@ -139,8 +170,9 @@ Sections
 
 /* 
 =======================================================
-About Section
+ABOUT SECTION - PROFILE IMAGE
 =======================================================
+Styling for profile picture container and hover effects
 */
 
 .about-section .profile-picture {
@@ -161,6 +193,13 @@ About Section
 .about-section .profile-picture img:hover {
     transform: scale(1.2);
 }
+
+/* 
+=======================================================
+ABOUT SECTION - TEXT & HEADING
+=======================================================
+Styling for about section paragraphs, headings, and positioning
+*/
 
 .about-section p {
     margin: 0em 10em 1em 0em;
@@ -184,7 +223,13 @@ About Section
     font-family: DM Sans;
 }
 
-    
+/* 
+=======================================================
+ABOUT SECTION - SOCIAL LINKS
+=======================================================
+Styling for social media icon links and hover animations
+*/
+
 .social-links {
     display: flex;
     flex-direction: row;
@@ -206,8 +251,9 @@ About Section
 
 /* 
 =======================================================
-Projects Section
+PROJECTS SECTION - HEADING & TEXT
 =======================================================
+Styling for project section headings, descriptions, and typography
 */
 
 .project-section h2 {
@@ -233,6 +279,13 @@ Projects Section
     padding: 0em 1em 0em 1em;
 }
 
+/* 
+=======================================================
+PROJECTS SECTION - GRID & DISPLAY
+=======================================================
+Layout and styling for project cards grid display
+*/
+
 .project-display {
     display: grid;
     margin: 3em 0em 0em 0em;
@@ -253,6 +306,13 @@ Projects Section
 .project-display-item:hover {
     transform: translateY(-6px);
 }
+
+/* 
+=======================================================
+PROJECTS SECTION - IMAGE & OVERLAY
+=======================================================
+Styling for project images and interactive overlay effects
+*/
 
 .project-image {
     width: 425px;
@@ -288,23 +348,15 @@ Projects Section
 
 /* 
 =======================================================
-Skills Section
+SKILLS SECTION - HEADING & TEXT
 =======================================================
+Styling for skills section headings, paragraphs, and typography
 */
 
 .skill-section h2 {
     margin: 1em 0em 0em 0em;
     text-align: left;
     font-family: Cormorant Garamond;
-}
-
-.skill-link {
-    color: var(--default-text-colour);
-    text-decoration: none;
-    font-size: 1.1rem;
-    font-family: DM Sans;
-    font-weight: normal;
-    float: right;
 }
 
 .skill-section p {
@@ -319,6 +371,22 @@ Skills Section
     margin: .5em 0em 0em 4em;
     font-size: 20px;
 }
+
+.skill-link {
+    color: var(--default-text-colour);
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-family: DM Sans;
+    font-weight: normal;
+    float: right;
+}
+
+/* 
+=======================================================
+SKILLS SECTION - GRID & DISPLAY
+=======================================================
+Layout and styling for skill cards grid display
+*/
 
 .skill-display {
     display: grid;
@@ -340,6 +408,13 @@ Skills Section
     transform: scale(1.05);
 }
 
+/* 
+=======================================================
+SKILLS SECTION - GRID POSITIONING
+=======================================================
+Grid positioning for different skill card types (Programming, Tools, Other)
+*/
+
 .programming {
     grid-row: 2;
 }
@@ -356,6 +431,13 @@ Skills Section
     margin: 0em 0em -.25em .25em;
 }
 
+/* 
+=======================================================
+SKILLS SECTION - ICONS
+=======================================================
+Styling for skill icons and images
+*/
+
 .skill-icon {
     width: 40px;
     padding: 1em 0em 0em 0em;
@@ -364,8 +446,9 @@ Skills Section
 
 /* 
 =======================================================
-Contact Section
+CONTACT/FOOTER SECTION - BUTTONS & INPUT
 =======================================================
+Styling for contact form buttons and text input elements
 */
 
 .sendButton {
