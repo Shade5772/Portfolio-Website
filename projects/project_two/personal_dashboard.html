@@ -35,19 +35,32 @@
             <div class="dashboard-box-top">
 
                 <div class="to-do-list">
-                    <h2 class="title"><img id="icons" src="/icons/check_list.png" alt=""> To-Do List
-                    </h2>
-                    <input type="text" id="text-box" placeholder="Add a new task...">
-                    <button class="button">Add</button>
-                    <p class="text">No tasks yet. Add one to get started</p>
+
+                    <div class="static-container">
+                        <h2 class="title"><img class="icons" src="/icons/check_list.png" alt=""> To-Do List
+                        </h2>
+                        <input type="text" id="text-box" class="todo-text-box" placeholder="Add a new task...">
+                        <button class="button" onclick="addTodo()">Add</button>
+                    </div>
+
+                    <div class="list-container">
+                        <p class="unimportant-text">No tasks yet. Add one to get started</p>
+                    </div>
+
                 </div>
 
                 <div class="habit-tracker">
-                    <h2 class="title"><img id="icons" src="/icons/foot_print.png" alt=""> Habit
-                        Tracker</h2>
-                    <input type="text" id="text-box" placeholder="Add a new habit...">
-                    <button class="button">Add</button>
-                    <p class="text">No habits yet. Add one to get started</p>
+
+                    <div class="static-container">
+                        <h2 class="title"><img class="icons" src="/icons/foot_print.png" alt=""> Habit
+                            Tracker</h2>
+                        <input type="text" id="text-box" class="habit-text-box" placeholder="Add a new habit...">
+                        <button class="button" onclick="addHabit()">Add</button>
+                    </div>
+
+                    <div class="list-container">
+                        <p class="unimportant-text">No habits yet. Add one to get started</p>
+                    </div>
 
                 </div>
 
@@ -56,13 +69,15 @@
             <div class="dashboard-box-bottom">
 
                 <div class="notes">
-                    <h2 class="title"><img id="icons" src="/icons/notes.png" alt=""> Notes</h2>
+                    <h2 class="title"><img class="icons" src="/icons/notes.png" alt=""> Notes</h2>
                     <textarea id="notes-text-box" placeholder="Start writing..."></textarea>
                 </div>
 
             </div>
 
         </section>
+
+        <script src="/projects/project_two/personal_dashboard.js"></script>
 
     </main>
 

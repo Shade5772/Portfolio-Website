@@ -17,15 +17,15 @@
     --dark-text: hsl(0, 0%, 100%);
     --dark-unimportant-text: hsl(0, 0%, 80%);
     --dark-hover: hsl(0, 0%, 57%);
-    --dark-action-color: hsl(153, 88%, 10%);
-    --dark-action-color-hover: hsl(149, 49%, 16%);
+    --dark-action-color: #686868;
+    --dark-action-color-hover: hsla(0, 0%, 100%, 0.500);
     --dark-dashboard: hsl(0, 0%, 19%);
 }
 
 body {
     min-height: 100vh;
-    font-family: Roboto;
-    background: radial-gradient(ellipse at top, hsl(120, 41%, 9%), hsl(0, 0%, 0%));;
+    font-family: DM Sans;
+    background: radial-gradient(ellipse at top, hsl(120, 41%, 20%), hsl(0, 0%, 0%));;
     color: var(--dark-text);
 }
 
@@ -53,6 +53,7 @@ main {
     text-decoration: none;
     color: var(--dark-text);
     font-weight: bolder;
+    font-family: Playfair;
     padding: 14px;
     margin: -.5em .25em;
     font-size: 20px;
@@ -97,13 +98,13 @@ main {
 
 .introduction {
     font-family: Playfair;
-    font-size: 64px;
+    font-size: 3.25rem;
     font-weight: bolder;
 }
 
 #hero-paragraph {
     margin: 1em 45em 0em 0em;
-    font-size: 20px;
+    font-size: 1.2rem;
 }
 
 .demo-section {
@@ -136,7 +137,7 @@ main {
 }
 
 .title {
-    font-size: 32px;
+    font-size: 1.5rem;
     padding-bottom: .75em;
 }
 
@@ -186,6 +187,10 @@ textarea {
     color: var(--dark-unimportant-text);
     text-align: center;
     margin: 2em 0em 2em 0em;
+}
+
+.icons {
+    width: 26px;
 }
 
 @media(max-width: 700px) {
