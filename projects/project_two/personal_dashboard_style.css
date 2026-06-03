@@ -106,7 +106,7 @@ main {
     gap: 1em;
     margin: 5em 0em 0em 0em;
     grid-template-columns: 26em 26em;
-    grid-template-rows: 21em auto;
+    grid-template-rows: 25em auto;
 }
 
 .dashboard-box-bottom {
@@ -130,25 +130,48 @@ main {
     margin-bottom: 1em;
 }
 
-.list-container {
+.todo-list-container {
     overflow-y: auto;
-    height: 12em;
+    height: 16em;
     padding: 0em .5em 0em .5em;
     border-radius: 10px;
     box-shadow: inset 0px 0px 50px 0px rgba(255, 255, 255, 0.20);
 }
 
-.list-container::-webkit-scrollbar {
+.todo-list-container::-webkit-scrollbar {
     width: 8px;
 }
 
-.list-container::-webkit-scrollbar-thumb {
+.todo-list-container::-webkit-scrollbar-thumb {
     background-color: var(--dark-hover);
     border-radius: 20px;
     height: 10px;
 }
 
-.list-container::-webkit-scrollbar-thumb:hover {
+.todo-list-container::-webkit-scrollbar-thumb:hover {
+    background-color: var(--light-action-color-hover);
+    border-radius: 20px;
+}
+
+.habit-list-container {
+    overflow-y: auto;
+    height: 12.5em;
+    padding: 0em .5em 0em .5em;
+    border-radius: 10px;
+    box-shadow: inset 0px 0px 50px 0px rgba(255, 255, 255, 0.20);
+}
+
+.habit-list-container::-webkit-scrollbar {
+    width: 8px;
+}
+
+.habit-list-container::-webkit-scrollbar-thumb {
+    background-color: var(--dark-hover);
+    border-radius: 20px;
+    height: 10px;
+}
+
+.habit-list-container::-webkit-scrollbar-thumb:hover {
     background-color: var(--light-action-color-hover);
     border-radius: 20px;
 }
@@ -213,6 +236,74 @@ main {
     padding: 1em;
     grid-column: 2;
     box-shadow: 0px 10px 40px 5px rgba(255, 255, 255, 0.15);
+}
+
+select,
+::picker(select) {
+  appearance: base-select;
+}
+
+select:open::picker-icon {
+  rotate: 180deg;
+}
+
+#month-select {
+    width: 210px;
+    padding: .5em;
+    font-size: 1rem;
+    color: var(--light-text);
+    background-color: var(--light-default);
+    border: 1px solid #ffffff;
+    border-radius: 8px;
+    cursor: pointer;
+    outline: none;
+    transition: border-color 0.2s ease;
+    width: 250px;
+}
+
+option {
+    background-color: var(--light-default);
+    color: var(--light-text);
+    padding: .5em;
+    border: 1px solid var(--light-action-color);
+}
+
+option:first-of-type {
+  border-radius: 8px 8px 0 0;
+}
+
+option:last-of-type {
+  border-radius: 0 0 8px 8px;
+}
+
+#year-select {
+    background-color: var(--dark-default);
+    border: 1px solid white;
+    border-radius: 10px;
+    width: 105px;
+    font-size: 16px;
+    padding: .5em;
+    margin: 1em 0em 0em 1em;
+    color: var(--light-text);
+}
+
+option::checkmark {
+  content: "";
+}
+
+option::-webkit-scrollbar {
+    width: 8px;
+}
+
+option::-webkit-scrollbar-thumb {
+    background-color: var(--dark-hover);
+    border-radius: 20px;
+    height: 10px;
+}
+
+option::-webkit-scrollbar-thumb:hover {
+    background-color: var(--light-action-color-hover);
+    border-radius: 20px;
 }
 
 .notes {

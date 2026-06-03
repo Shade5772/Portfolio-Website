@@ -9,14 +9,12 @@ function addTodo() {
         const todoText = document.createElement("p");
         todoText.innerText = todoInput.value;
         todoText.classList.add("habit-styling");
-        document.getElementsByClassName("list-container")[0].appendChild(todoText);
+        document.getElementsByClassName("todo-list-container")[0].appendChild(todoText);
         removeText.style.margin = '.5em 0em 0em 0em'
 
         if (todoInput.value.length > 50) {
             todoText.style.overflowX = 'scroll';
         }
-
-        console.log(todoInput.value.length);
 
         const checkbox = document.createElement('input');
         checkbox.type = 'checkbox';
@@ -47,7 +45,7 @@ function addHabit() {
         const habitText = document.createElement("p");
         habitText.innerText = habitInput.value;
         habitText.classList.add("habit-styling");
-        document.getElementsByClassName("list-container")[1].appendChild(habitText);
+        document.getElementsByClassName("habit-list-container")[0].appendChild(habitText);
         removeText.style.margin = '.5em 0em 0em 0em'
 
         habitInput.value = '';
