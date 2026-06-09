@@ -107,6 +107,10 @@ function addHabit() {
             createDateNum.classList.add("datenum-styling");
             calenderDiv.appendChild(createDateNum);
 
+            createDateNum.addEventListener("click", () => {
+                createDateNum.classList.toggle("datenum-clicked-styling");
+            });
+
         }
 
     }

@@ -366,6 +366,18 @@ Delete action styling for list items
     height: 2em;
 }
 
+.datenum-styling:hover {
+    background-color: var(--light-action-color-hover);
+}
+
+.datenum-clicked-styling {
+    background-color: var(--dark-action-color-hover);
+}
+
+.datenum-clicked-styling:hover {
+    background-color: var(--dark-action-color);
+}
+
 /*
 =======================================================
 ITEM STYLING
