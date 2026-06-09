@@ -84,5 +84,30 @@ function addHabit() {
         createDiv.appendChild(createCal);
 
         habitInput.value = '';
+
+        let dates = ["Su", "Mo", "Tu", "Wed", "Th", "Fri", "Sat"];
+        const calenderDiv = document.createElement("div");
+        calenderDiv.classList.add("calender-styling");
+        createDiv.appendChild(calenderDiv);
+
+
+        for (i = 0; i <= 6; i += 1) {
+
+            const createDates = document.createElement("p");
+            createDates.classList.add("date-styling");
+            createDates.innerText = dates[i];
+            calenderDiv.appendChild(createDates);
+
+        }
+
+        for (x = 1; x <= 31; x += 1) {
+
+            const createDateNum = document.createElement("button");
+            createDateNum.innerText = x;
+            createDateNum.classList.add("datenum-styling");
+            calenderDiv.appendChild(createDateNum);
+
+        }
+
     }
 }
