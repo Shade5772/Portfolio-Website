@@ -221,6 +221,8 @@ main {
     cursor: pointer;
     font-size: 1rem;
     margin-left: auto;
+    grid-column: 3;
+    grid-row: 1;
     padding: 0.25em 0.5em;
     border-radius: 5px;
     transition: background-color 0.3s ease;
@@ -228,6 +230,10 @@ main {
 
 .delete-button:hover {
     background-color: rgb(194, 1, 1);
+}
+
+.delete-button-checked {
+    text-decoration: none;
 }
 
 .habit-tracker {
@@ -238,13 +244,31 @@ main {
     box-shadow: 0px 10px 40px 5px rgba(255, 255, 255, 0.15);
 }
 
+.habit-styling {
+    align-items: center;
+    display: flex;
+}
+
+.month-styling {
+    font-size: .75rem;
+    grid-column: 1;
+    grid-row: 2;
+    align-items: center;
+    color: var(--dark-unimportant-text);
+    display: block;
+    width: fit-content;
+    margin-right: auto;
+}
+
+
+
 select,
 ::picker(select) {
-  appearance: base-select;
+    appearance: base-select;
 }
 
 select:open::picker-icon {
-  rotate: 180deg;
+    rotate: 180deg;
 }
 
 #month-select {
@@ -269,11 +293,11 @@ option {
 }
 
 option:first-of-type {
-  border-radius: 8px 8px 0 0;
+    border-radius: 8px 8px 0 0;
 }
 
 option:last-of-type {
-  border-radius: 0 0 8px 8px;
+    border-radius: 0 0 8px 8px;
 }
 
 #year-select {
@@ -288,7 +312,7 @@ option:last-of-type {
 }
 
 option::checkmark {
-  content: "";
+    content: "";
 }
 
 option::-webkit-scrollbar {
@@ -367,178 +391,60 @@ textarea {
     margin: 2em 0em 2em 0em;
 }
 
-.habit-styling {
+.habit-item-container {
+    display: grid;
+    gap: .5em;
+    grid-template-columns: auto auto auto;
+    grid-template-rows: auto auto;
+    justify-content: space-between;
     padding: .5em;
     border-radius: 10px;
     background-color: var(--dark-default);
     color: var(--light-text);
     margin-bottom: .5em;
+    height: auto;
+}
+
+.todo-item-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: .5em;
+    border-radius: 10px;
+    background-color: var(--dark-default);
+    color: var(--light-text);
+    margin-bottom: .5em;
+}
+
+.todo-item-container-checked {
+    background-color: rgb(77, 77, 77);
+}
+
+.todo-styling {
     align-items: center;
     display: flex;
 }
 
-.habit-styling::-webkit-scrollbar {
+.todo-styling-checked {
+    color: var(--light-unimportant-text);
+    text-decoration: line-through solid white;
+    text-decoration-thickness: 2px;
+}
+
+.todo-styling::-webkit-scrollbar {
     height: 8px;
 }
 
-.habit-styling::-webkit-scrollbar-thumb {
+.todo-styling::-webkit-scrollbar-thumb {
     background-color: var(--dark-hover);
     border-radius: 20px;
 }
 
-.habit-styling::-webkit-scrollbar-thumb:hover {
+.todo-styling::-webkit-scrollbar-thumb:hover {
     background-color: var(--light-action-color-hover);
     border-radius: 20px;
 }
 
 .icons {
     width: 26px;
-}
-
-@media(max-width: 700px) {
-
-    .navigation-bar-box {
-        display: flex;
-        flex-direction: row;
-        padding: .5em 1em;
-        justify-content: center;
-    }
-
-    .navigation-bar {
-        display: flex;
-        padding: 1em .5em;
-        border-radius: 20px;
-        align-items: center;
-        justify-content: center;
-    }
-
-    .navigation-bar a {
-        text-decoration: none;
-        color: var(--light-text);
-        font-weight: bolder;
-        padding: 14px;
-        margin: -.5em .25em;
-        font-size: 14px;
-        border-radius: 20px;
-        transition: background-color .3s ease-in-out;
-    }
-
-    .navigation-bar a:hover {
-        background-color: var(--dark-hover);
-        border-radius: 20px;
-    }
-
-    .navigation-active {
-        background-color: var(--light-action-color);
-        border-radius: 20px;
-    }
-
-    #navigation-icon {
-        padding: .5em;
-        transition: background-color .3s ease-in-out;
-    }
-
-    #navigation-icon:hover {
-        background-color: var(--dark-hover);
-        border-radius: 20px;
-    }
-
-    .introduction {
-        text-align: center;
-        font-size: 64px;
-        font-weight: bolder;
-        margin-top: 1em;
-    }
-
-    .dashboard {
-        display: grid;
-        margin: 2em 1em 0em 1em;
-    }
-
-    .dashboard-box-top {
-        display: grid;
-        gap: 1em;
-        overflow: scroll;
-        margin: 3em 0em 0em 0em;
-        grid-template-columns: 22em 22em;
-        grid-template-rows: auto auto;
-    }
-
-    .dashboard-box-bottom {
-        display: grid;
-        overflow: scroll;
-        justify-content: left;
-        margin: 1em 0em 0em 0em;
-        padding-right: .5em;
-        gap: 1em;
-        grid-template-columns: 21em auto auto;
-        grid-template-rows: auto auto;
-    }
-
-    .to-do-list {
-        padding: 1em;
-        grid-column: 1;
-    }
-
-    .habit-tracker {
-        padding: 1em;
-        grid-column: 2;
-    }
-
-    .notes {
-        padding: 1em;
-        grid-column: 1 / span 2;
-    }
-
-    .icons {
-        width: 100px;
-    }
-
-    .title {
-        font-size: 1.5rem;
-        padding-bottom: .75em;
-    }
-
-    #text-box {
-        background-color: var(--dark-default);
-        border: none;
-        border-radius: 10px;
-        width: 250px;
-        font-size: 14px;
-        padding: .75em;
-        margin-right: 1em;
-        color: var(--light-text);
-    }
-
-    #notes-text-box {
-        background-color: var(--dark-default);
-        border: none;
-        border-radius: 10px;
-        width: 100%;
-        height: 16em;
-        font-size: 16px;
-        padding: .75em;
-        color: var(--light-text);
-    }
-
-    textarea {
-        resize: none;
-        vertical-align: top;
-    }
-
-    .button {
-        background-color: var(--light-action-color);
-        color: var(--light-text);
-        padding: .75em;
-        border: none;
-        border-radius: 10px;
-        font-size: 14px;
-    }
-
-    .text {
-        font-size: 14px;
-        color: var(--dark-unimportant-text);
-        text-align: center;
-        margin: 2em 0em 2em 0em;
-    }
 }
