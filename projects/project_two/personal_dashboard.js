@@ -15,8 +15,9 @@ function addTodo() {
         createDiv.appendChild(todoText);
         removeText.style.margin = '.5em 0em 0em 0em'
         todoText.style.fontWeight = 'bold';
+        todoText.style.margin = ' 0em .5em 0em 0em'
 
-        if (todoInput.value.length > 50) {
+        if (todoInput.value.length >= 21) {
             todoText.style.overflowX = 'scroll';
         }
 
@@ -64,7 +65,13 @@ function addHabit() {
         habitText.innerText = habitInput.value;
         habitText.classList.add("habit-styling");
         createDiv.appendChild(habitText);
-        removeText.style.margin = '.5em 0em 0em 0em'
+        removeText.style.margin = '.5em 0em 0em 0em';
+        habitText.style.fontWeight = 'bold';
+
+        if (habitInput.value.length >= 21) {
+            habitText.style.overflowX = 'scroll';
+            habitText.style.overflowY = 'hidden';
+        }
 
         const deleteButton = document.createElement('button');
         deleteButton.innerText = 'Delete';
