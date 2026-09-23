@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Dashboard</title>
+    <link rel="stylesheet" href="personal_dashboard_style.css">
+    <link rel="icon" href="/icons/Logo.png">
+</head>
+
+<body>
+
+    <header>
+        <div class="navigation-bar-box">
+            <nav class="navigation-bar">
+                <div class="left">
+                    <a href="/index.html">Portfolio Website</a>
+                </div>
+
+                <div class="right">
+                    <a href="index.html">Home</a>
+                    <a class="navigation-active" href="personal_dashboard.html">Personal Dashboard</a>
+                    <a id="navigation-icon" href="#"><img id="nav-icons" src="/icons/setting_2.png"
+                            alt="Setting Cog Wheel"></a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+
+        <section class="dashboard">
+
+            <div class="dashboard-box-top">
+
+                <div class="to-do-list">
+
+                    <div class="static-container">
+                        <h2 class="title"><img class="icons" src="/icons/check_list.png" alt=""> To-Do List
+                        </h2>
+                        <input type="text" id="text-box" class="todo-text-box" placeholder="Add a new task...">
+                        <button class="button" onclick="addTodo()">Add</button>
+                    </div>
+
+                    <div class="todo-list-container">
+                        <p class="unimportant-text">No tasks yet. Add one to get started</p>
+                    </div>
+
+                </div>
+
+                <div class="notes">
+                    <h2 class="title"><img class="icons" src="/icons/notes.png" alt=""> Notes</h2>
+                    <textarea id="notes-text-box" placeholder="Start writing..."></textarea>
+                </div>
+
+
+
+            </div>
+
+            <div class="dashboard-box-bottom">
+
+                <div class="habit-tracker">
+
+                    <div class="static-container">
+                        <h2 class="title"><img class="icons" src="/icons/foot_print.png" alt=""> Habit
+                            Tracker</h2>
+                        <input type="text" id="text-box" class="habit-text-box" placeholder="Add a new habit...">
+                        <button class="button" onclick="addHabit()">Add</button>
+
+                        <select name="month" id="month-select">
+                            <option value="January">January</option>
+                            <option value="February">February</option>
+                            <option value="March">March</option>
+                            <option value="April">April</option>
+                            <option value="May">May</option>
+                            <option value="June">June</option>
+                            <option value="July">July</option>
+                            <option value="August">August</option>
+                            <option value="September">September</option>
+                            <option value="October">October</option>
+                            <option value="November">November</option>
+                            <option value="December">December</option>
+                        </select>
+
+                        <select name="year" id="year-select">
+                            <option value="2023">2023</option>
+                            <option value="2024">2024</option>
+                            <option value="2025">2025</option>
+                            <option value="2026">2026</option>
+                            <option value="2027">2027</option>
+                        </select>
+
+                    </div>
+
+                    <div class="habit-list-container">
+                        <p class="unimportant-text">No habits yet. Add one to get started</p>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <script src="/projects/project_two/personal_dashboard.js"></script>
+
+    </main>
+
+    <footer>
+
+    </footer>
+
+</body>
+
+</html>

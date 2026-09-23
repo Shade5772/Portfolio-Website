@@ -1,0 +1,564 @@
+/*
+=======================================================
+IMPORTS
+=======================================================
+Google font imports used across the dashboard
+*/
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Playfair:ital,opsz,wght@0,5..1200,300..900;1,5..1200,300..900&display=swap');
+
+/*
+=======================================================
+RESET
+=======================================================
+Base reset for box sizing and spacing
+*/
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/*
+=======================================================
+THEME VARIABLES
+=======================================================
+Color palette and theme-specific tokens
+*/
+:root {
+    --light-default: #091413;
+    --light-text: #fff;
+    --light-unimportant-text: hsl(0, 0%, 80%);
+    --light-hover: hsla(0, 0%, 100%, 0.5);
+    --light-action-color: #686868;
+    --light-action-color-hover: hsla(0, 0%, 100%, 0.5);
+    --light-dashboard: hsl(0, 0%, 19%);
+
+    --dark-default: hsl(0, 0%, 0%);
+    --dark-text: hsl(0, 0%, 100%);
+    --dark-unimportant-text: hsl(0, 0%, 80%);
+    --dark-hover: hsl(0, 0%, 57%);
+    --dark-action-color: hsl(152, 12%, 22%);
+    --dark-action-color-hover: hsl(149, 49%, 16%);
+    --dark-dashboard: hsl(0, 0%, 19%);
+}
+
+/*
+=======================================================
+PAGE BASE
+=======================================================
+Basic page styling and root layout
+*/
+body {
+    min-height: 100vh;
+    font-family: DM Sans, sans-serif;
+    background: radial-gradient(ellipse at top, hsl(120, 41%, 20%), hsl(0, 0%, 0%));
+    color: var(--light-text);
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+}
+
+/*
+=======================================================
+NAVIGATION BAR
+=======================================================
+Styling for the fixed header navigation element
+*/
+.navigation-bar-box {
+    display: flex;
+    flex-direction: row;
+    padding: 0.5em 1em;
+}
+
+.navigation-bar {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    padding: 1em 0.5em;
+    width: 100%;
+    border-radius: 20px;
+}
+
+.navigation-bar a {
+    border-radius: 20px;
+    color: var(--light-text);
+    font-family: Playfair, serif;
+    font-size: 20px;
+    font-weight: bolder;
+    margin: -0.5em 0.25em;
+    padding: 14px;
+    text-decoration: none;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.navigation-bar a:hover,
+#navigation-icon:hover {
+    background-color: var(--light-hover);
+    border-radius: 20px;
+}
+
+.navigation-active {
+    background-color: var(--light-action-color);
+    border-radius: 20px;
+}
+
+#navigation-icon {
+    transition: background-color 0.3s ease-in-out;
+}
+
+#nav-icons {
+    margin: 0 0 -0.5em 0;
+}
+
+/*
+=======================================================
+INTRO SECTION
+=======================================================
+Header text and introduction styling
+*/
+.introduction {
+    font-size: 64px;
+    font-weight: bolder;
+    margin-top: 1em;
+    text-align: center;
+}
+
+/*
+=======================================================
+DASHBOARD LAYOUT
+=======================================================
+Grid layout for dashboard cards and sections
+*/
+.dashboard {
+    display: grid;
+    margin: 2em;
+}
+
+.dashboard-box-top {
+    display: grid;
+    gap: 1em;
+    grid-template-columns: 26em 26em auto;
+    grid-template-rows: 25em auto;
+    margin: 5em 0 0 0;
+}
+
+.dashboard-box-bottom {
+    display: grid;
+    gap: 1em;
+    grid-template-columns: 26em auto auto;
+    grid-template-rows: 33em auto;
+    justify-content: left;
+    margin: 1em 1em 0 0;
+}
+
+/*
+=======================================================
+CARD CONTAINERS
+=======================================================
+Shared styling for dashboard card panels
+*/
+.to-do-list,
+.habit-tracker,
+.notes {
+    background-color: var(--light-dashboard);
+    border-radius: 10px;
+    box-shadow: 0px 10px 40px 5px rgba(255, 255, 255, 0.15);
+    padding: 1em;
+}
+
+.to-do-list {
+    grid-column: 1;
+}
+
+.habit-tracker {
+    grid-column: 1;
+}
+
+.notes {
+    grid-column: 2 / span 3;
+}
+
+.static-container {
+    margin-bottom: 1em;
+}
+
+.habit-item-container {
+    background-color: var(--dark-default);
+    border-radius: 10px;
+    color: var(--light-text);
+    margin-bottom: 0.5em;
+    padding: 0.5em;
+    scroll-snap-align: start;
+    flex-shrink: 0;
+    scroll-snap-align: center;
+}
+
+
+.todo-item-container {
+    background-color: var(--dark-default);
+    border-radius: 10px;
+    color: var(--light-text);
+    margin-bottom: 0.5em;
+    padding: 0.5em;
+}
+
+.habit-item-container {
+    display: grid;
+    gap: .5em;
+    grid-template-columns: 15em;
+    justify-content: space-between;
+}
+
+.todo-item-container {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+}
+
+.todo-item-container-checked {
+    background-color: rgb(77, 77, 77);
+}
+
+/*
+=======================================================
+SCROLL CONTAINERS
+=======================================================
+Scrollable list areas and custom scrollbar styling
+*/
+.todo-list-container {
+    border-radius: 10px;
+    box-shadow: inset 0px 0px 50px 0px rgba(255, 255, 255, 0.20);
+    overflow-y: auto;
+    padding: 0 0.5em;
+    overscroll-behavior: contain;
+}
+
+
+.habit-list-container {
+    display: flex;
+    gap: 1em;
+    border-radius: 10px;
+    box-shadow: inset 0px 0px 50px 0px rgba(255, 255, 255, 0.20);
+    overflow-x: auto;
+    overflow-y: hidden;
+    padding: 1em 1em 0em 0em;
+    overscroll-behavior: contain;
+    justify-content: space-evenly;
+    scroll-snap-type: x mandatory;
+
+}
+
+.todo-list-container {
+    height: 16em;
+}
+
+.habit-list-container {
+    height: 20.5em;
+}
+
+.todo-list-container::-webkit-scrollbar,
+.habit-list-container::-webkit-scrollbar,
+.habit-styling::-webkit-scrollbar,
+.todo-styling::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+.todo-list-container::-webkit-scrollbar-thumb,
+.habit-list-container::-webkit-scrollbar-thumb,
+.habit-styling::-webkit-scrollbar-thumb,
+.todo-styling::-webkit-scrollbar-thumb {
+    background-color: var(--dark-hover);
+    border-radius: 20px;
+    height: 10px;
+}
+
+.todo-list-container::-webkit-scrollbar-thumb:hover,
+.habit-list-container::-webkit-scrollbar-thumb:hover,
+.habit-styling::-webkit-scrollbar-thumb:hover,
+.todo-styling::-webkit-scrollbar-thumb:hover {
+    background-color: var(--light-action-color-hover);
+}
+
+/*
+=======================================================
+CHECKBOX STYLING
+=======================================================
+Custom checkbox appearance and checkmark animation
+*/
+.checkbox-styling {
+    flex-shrink: 0;
+    appearance: none;
+    align-items: center;
+    background-color: var(--light-dashboard);
+    border: 2px solid #6b7280;
+    border-radius: 4px;
+    cursor: pointer;
+    display: inline-grid;
+    gap: 10px;
+    font-family: sans-serif;
+    margin-right: 0.5em;
+    place-content: center;
+    user-select: none;
+    width: 20px;
+    height: 20px;
+}
+
+.checkbox-styling:checked {
+    background-color: var(--light-unimportant-text);
+    border-color: #6b7280;
+}
+
+.checkbox-styling::before {
+    content: "";
+    width: 10px;
+    height: 6px;
+    border-bottom: 2px solid #ffffff;
+    border-left: 2px solid #ffffff;
+    margin-top: -2px;
+    transform: rotate(-45deg) scale(0);
+    transition: transform 0.1s ease-in-out;
+}
+
+.checkbox-styling:checked::before {
+    transform: rotate(-45deg) scale(1);
+}
+
+/*
+=======================================================
+DELETE BUTTON
+=======================================================
+Delete action styling for list items
+*/
+.delete-button {
+    align-self: center;
+    background-color: darkred;
+    border: none;
+    border-radius: 5px;
+    color: var(--light-text);
+    cursor: pointer;
+    font-size: 1rem;
+    grid-column: 3;
+    grid-row: 1;
+    margin-left: auto;
+    padding: 0.25em 0.5em;
+    transition: background-color 0.3s ease;
+}
+
+.delete-button:hover {
+    background-color: rgb(194, 1, 1);
+}
+
+.delete-button-checked {
+    text-decoration: none;
+}
+
+.datenum-styling {
+    align-self: center;
+    background-color: var(--light-action-color);
+    border: none;
+    border-radius: 5px;
+    color: var(--light-text);
+    cursor: pointer;
+    font-size: 1rem;
+    padding: 0.25em 0.5em;
+    width: 2.5em;
+    height: 2em;
+}
+
+.datenum-styling:hover {
+    background-color: var(--light-action-color-hover);
+}
+
+.datenum-clicked-styling {
+    background-color: var(--dark-action-color-hover);
+}
+
+.datenum-clicked-styling:hover {
+    background-color: var(--dark-action-color);
+}
+
+/*
+=======================================================
+ITEM STYLING
+=======================================================
+Habit and todo item alignment and decoration
+*/
+.habit-styling,
+.todo-styling {
+    align-items: center;
+    display: flex;
+}
+
+.todo-styling-checked {
+    color: var(--light-unimportant-text);
+    text-decoration: line-through solid white;
+    text-decoration-thickness: 2px;
+}
+
+.month-styling {
+    align-items: center;
+    color: var(--dark-unimportant-text);
+    display: block;
+    font-size: 0.75rem;
+    grid-column: 1;
+    grid-row: 2;
+    margin-right: auto;
+    width: fit-content;
+}
+
+.date-styling {
+    color: var(--dark-unimportant-text);
+    font-size: 0.75rem;
+    align-items: center;
+}
+
+.calender-styling {
+    display: grid;
+    grid-template-columns: auto auto auto auto auto auto auto;
+    grid-template-rows: auto;
+    justify-content: center;
+    align-content: center;
+    text-align: center;
+    grid-row: 3;
+    grid-column: 1 / span 3;
+    gap: .5em;
+    margin: .5em 0em .5em 0em;
+
+}
+
+/*
+=======================================================
+SELECT ELEMENTS
+=======================================================
+Styling for month/year selects and native picker behavior
+*/
+select,
+::picker(select) {
+    appearance: base-select;
+}
+
+select:open::picker-icon {
+    rotate: 180deg;
+}
+
+#month-select,
+#year-select {
+    border: 1px solid white;
+    border-radius: 10px;
+    color: var(--light-text);
+    cursor: pointer;
+    font-size: 16px;
+    outline: none;
+    padding: 0.5em;
+    transition: border-color 0.2s ease;
+}
+
+#month-select {
+    background-color: var(--light-default);
+    width: 250px;
+}
+
+#year-select {
+    background-color: var(--dark-default);
+    margin: 1em 0 0 1em;
+    width: 105px;
+}
+
+option {
+    background-color: var(--light-default);
+    border: 1px solid var(--light-action-color);
+    color: var(--light-text);
+    padding: 0.5em;
+}
+
+option:first-of-type {
+    border-radius: 8px 8px 0 0;
+}
+
+option:last-of-type {
+    border-radius: 0 0 8px 8px;
+}
+
+/*
+=======================================================
+SECTION TITLES
+=======================================================
+Title formatting for dashboard panels
+*/
+.title {
+    font-size: 1.5rem;
+    padding-bottom: 0.75em;
+}
+
+/*
+=======================================================
+TEXT & INPUT FIELDS
+=======================================================
+Styling for text inputs, note fields and textareas
+*/
+#text-box,
+#notes-text-box {
+    background-color: var(--dark-default);
+    border: 1px solid white;
+    border-radius: 10px;
+    color: var(--light-text);
+    font-size: 16px;
+    padding: 0.75em;
+}
+
+#text-box {
+    margin-right: 1em;
+    width: 300px;
+}
+
+#notes-text-box {
+    height: 19.5em;
+    width: 100%;
+}
+
+textarea {
+    resize: none;
+    vertical-align: top;
+}
+
+/*
+=======================================================
+BUTTONS
+=======================================================
+Primary button appearance and hover state
+*/
+.button {
+    background-color: var(--light-action-color);
+    border: 1px solid white;
+    border-radius: 10px;
+    color: var(--light-text);
+    font-size: 16px;
+    padding: 0.75em;
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+}
+
+.button:hover {
+    background-color: var(--light-action-color-hover);
+}
+
+/*
+=======================================================
+UTILITY CLASSES
+=======================================================
+Miscellaneous utility spacing and text styles
+*/
+.unimportant-text {
+    color: var(--dark-unimportant-text);
+    font-size: 16px;
+    margin: 2em 0;
+    justify-self: center;
+}
+
+.icons {
+    width: 26px;
+}

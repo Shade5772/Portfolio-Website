@@ -1,0 +1,477 @@
+/* 
+=======================================================
+FONT IMPORTS
+=======================================================
+Import Google Fonts used throughout the website
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
+
+/* 
+=======================================================
+CSS VARIABLES & GLOBAL COLORS
+=======================================================
+Define reusable color values and design tokens
+*/
+
+:root {
+
+    --background-colour-one: #0d1f0d;
+    --background-colour-two: #142014;
+    --default-text-colour: #fff;
+    --default-hover: #dfe1e167;
+}
+
+/* 
+=======================================================
+RESET & BASE STYLES
+=======================================================
+Universal element resets and body styling
+*/
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+
+}
+
+body {
+    min-height: 100vh;
+    font-family: Roboto;
+    color: var(--default-text-colour);
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+}
+
+footer {
+    display: flex;
+    flex-direction: column;
+}
+
+/* 
+=======================================================
+TYPOGRAPHY - HEADINGS
+=======================================================
+Styling for heading elements (h1, h2)
+*/
+
+h1 {
+    padding: .5em;
+    font-size: 4rem;
+    font-weight: normal;
+    font-family: Cormorant Garamond;
+}
+
+h2 {
+    font-family: DM Sans;
+    font-size: 3rem;
+    font-weight: normal;
+}
+
+/* 
+=======================================================
+TYPOGRAPHY - BODY & EMPHASIS
+=======================================================
+Styling for paragraph text and emphasized elements
+*/
+
+p {
+    font-family: DM Mono;
+    font-size: 1rem;
+    line-height: 1.6;
+    font-weight: normal;
+}
+
+em {
+    font-style: italic;
+    color: #e8b84b;
+}
+
+/* 
+=======================================================
+NAVIGATION BAR
+=======================================================
+Styling for the fixed header navigation element
+*/
+
+nav {
+    display: flex;
+    background-color: var(--background-colour-one);
+    align-items: center;
+    width: 100%;
+    justify-content: space-between;
+    position: fixed;
+    height: 4em;
+    top: 0em;
+    z-index: 1000;
+}
+
+nav .right a,
+nav .left a {
+    color: var(--default-text-colour);
+    font-weight: normal;
+    font-family: Cormorant Garamond;
+    font-size: 1.25rem;
+    text-decoration: none;
+    padding: 1em;
+}
+
+nav .right a:hover,
+nav .left a:hover {
+    transition: background-color .2s ease;
+    background-color: var(--default-hover);
+}
+
+/* 
+=======================================================
+MAIN SECTIONS - LAYOUT
+=======================================================
+Container styling for major page sections (About, Projects, Skills, Footer)
+*/
+
+.about-section {
+    flex-direction: column;
+    justify-content: center;
+    padding: 8em 8em 7em 8em;
+    display: flex;
+    background-color: var(--background-colour-one);
+    gap: 1em;
+}
+
+.project-section {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    padding: 2em 8em 3em 8em;
+    background-color: var(--background-colour-one);
+}
+
+.skill-section {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    padding: 5em 8em 3em 8em;
+    background-color: var(--background-colour-one);
+}
+
+.contacts-section {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    background-color: var(--background-colour-one);
+    padding: 1em 2em 1em 2em;
+}
+
+/* 
+=======================================================
+ABOUT SECTION - PROFILE IMAGE
+=======================================================
+Styling for profile picture container and hover effects
+*/
+
+.about-section .profile-picture {
+    width: 350px;
+    height: 450px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.about-section .profile-picture img {
+    width: 400px;
+    height: 500px;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+    box-shadow: 10px 10px 20px rgba(255, 255, 255, 0.2);
+}
+
+.about-section .profile-picture img:hover {
+    transform: scale(1.2);
+}
+
+/* 
+=======================================================
+ABOUT SECTION - TEXT & HEADING
+=======================================================
+Styling for about section paragraphs, headings, and positioning
+*/
+
+.about-section p {
+    margin: 0em 10em 1em 0em;
+    padding: .5em;
+    font-size: 1rem;
+    font-family: DM Sans;
+    line-height: 1.6;
+    font-weight: normal;
+}
+
+#hero-heading {
+    margin: -3.1em 0em 0em -.5em;
+}
+
+.hero-text {
+    margin: -20em 0em 0em 25em;
+}
+
+.subtext {
+    color: #c8bfa8;
+    font-family: DM Sans;
+}
+
+/* 
+=======================================================
+ABOUT SECTION - SOCIAL LINKS
+=======================================================
+Styling for social media icon links and hover animations
+*/
+
+.social-links {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding-bottom: 3em;
+}
+
+.social-links a img {
+    width: 40px;
+}
+
+.social-links a {
+    padding: .5em .5em 0em;
+}
+
+.social-links a img:hover {
+    transform: scale(1.2);
+}
+
+/* 
+=======================================================
+PROJECTS SECTION - HEADING & TEXT
+=======================================================
+Styling for project section headings, descriptions, and typography
+*/
+
+.project-section h2 {
+    margin: 1em 0em 0em 0em;
+    font-family: Cormorant Garamond;
+}
+
+.project-section h3 {
+    font-size: 1.3rem;
+    margin: 1em 0em -1em 0em;
+    text-align: left;
+    font-family: Cormorant Garamond;
+}
+
+.project-section p {
+    padding: 0em 1em 1em 0em;
+    font-size: 0.88rem;
+    line-height: 1.6;
+    font-weight: normal;
+}
+
+.project-text {
+    padding: 0em 1em 0em 1em;
+}
+
+/* 
+=======================================================
+PROJECTS SECTION - GRID & DISPLAY
+=======================================================
+Layout and styling for project cards grid display
+*/
+
+.project-display {
+    display: grid;
+    margin: 3em 0em 0em 0em;
+    padding: 0em 0em 0em 0em;
+    grid-template-rows: 380px;
+    grid-template-columns: 425px 425px;
+    gap: 2em;
+    justify-content: left;
+}
+
+.project-display-item {
+    background-color: #1e3320;
+    border-radius: 10px;
+    position: relative;
+    transition: transform 0.3s ease-in-out;
+}
+
+.project-display-item:hover {
+    transform: translateY(-6px);
+}
+
+/* 
+=======================================================
+PROJECTS SECTION - IMAGE & OVERLAY
+=======================================================
+Styling for project images and interactive overlay effects
+*/
+
+.project-image {
+    width: 425px;
+    object-fit: contain;
+    border-radius: 10px 10px 0px 0px;
+}
+
+.overlay {
+    position: absolute;
+    display: flex;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.65);
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.overlay img {
+    margin: 0em 0em -.25em .25em;
+}
+
+.project-link {
+    color: var(--default-text-colour);
+    text-decoration: none;
+    font-size: 20px;
+    font-family: Poppins;
+    font-weight: bold;
+}
+
+/* 
+=======================================================
+SKILLS SECTION - HEADING & TEXT
+=======================================================
+Styling for skills section headings, paragraphs, and typography
+*/
+
+.skill-section h2 {
+    margin: 1em 0em 0em 0em;
+    text-align: left;
+    font-family: Cormorant Garamond;
+}
+
+.skill-section p {
+    padding: .5em;
+    font-size: 1.05rem;
+    font-family: DM Sans;
+    line-height: 1.6;
+    font-weight: normal;
+}
+
+.skill-section ul {
+    margin: .5em 0em 0em 4em;
+    font-size: 20px;
+}
+
+.skill-link {
+    color: var(--default-text-colour);
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-family: DM Sans;
+    font-weight: normal;
+    float: right;
+}
+
+/* 
+=======================================================
+SKILLS SECTION - GRID & DISPLAY
+=======================================================
+Layout and styling for skill cards grid display
+*/
+
+.skill-display {
+    display: grid;
+    margin: 3em 0em 0em 0em;
+    grid-template-rows: auto auto;
+    grid-template-columns: 425px 425px;
+    gap: 1.5em;
+    justify-content: left;
+}
+
+.skill-display-item {
+    background-color: #1e3320;
+    border-radius: 10px;
+    padding: 1em;
+    transition: transform 0.3s ease-in-out;
+}
+
+.skill-display-item:hover {
+    transform: scale(1.05);
+}
+
+/* 
+=======================================================
+SKILLS SECTION - GRID POSITIONING
+=======================================================
+Grid positioning for different skill card types (Programming, Tools, Other)
+*/
+
+.programming {
+    grid-row: 2;
+}
+
+.tools {
+    grid-row: 1;
+}
+
+.other {
+    grid-row: 1 / span 2;
+}
+
+.other p img {
+    margin: 0em 0em -.25em .25em;
+}
+
+/* 
+=======================================================
+SKILLS SECTION - ICONS
+=======================================================
+Styling for skill icons and images
+*/
+
+.skill-icon {
+    width: 40px;
+    padding: 1em 0em 0em 0em;
+    margin: 0em .5em 0em 0em;
+}
+
+/* 
+=======================================================
+CONTACT/FOOTER SECTION - BUTTONS & INPUT
+=======================================================
+Styling for contact form buttons and text input elements
+*/
+
+.sendButton {
+    padding: .5em;
+    margin-top: 1em;
+    font-size: 20px;
+    font-weight: bold;
+    border: none;
+    background-color: #c49a2e;
+    border-radius: 10px;
+    transition: background-color .2s ease;
+    color: var(--default-text-colour);
+}
+
+.sendButton:hover {
+    background-color: #f5e6b8;
+}
+
+#textInput {
+    padding: .5em;
+    margin-top: 1.5em;
+    font-size: 20px;
+    font-weight: bold;
+    border: none;
+    border-radius: 10px;
+}
