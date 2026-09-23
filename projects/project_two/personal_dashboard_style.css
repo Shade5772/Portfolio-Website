@@ -26,7 +26,7 @@ THEME VARIABLES
 Color palette and theme-specific tokens
 */
 :root {
-    --light-default: #091413;
+    --light-default: hsl(0, 0%, 0%);
     --light-text: #fff;
     --light-unimportant-text: hsl(0, 0%, 80%);
     --light-hover: hsla(0, 0%, 100%, 0.5);
@@ -458,7 +458,7 @@ select:open::picker-icon {
 }
 
 #month-select {
-    background-color: var(--light-default);
+    background-color: var(--dark-default);
     width: 250px;
 }
 
