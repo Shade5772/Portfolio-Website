@@ -458,7 +458,7 @@ select:open::picker-icon {
 }
 
 #month-select {
-    background-color: var(--light-default);
+    background-color: var(--dark-default);
     width: 250px;
 }
 
