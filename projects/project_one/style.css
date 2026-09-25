@@ -18,6 +18,35 @@ main {
     flex-direction: column;
 }
 
+nav {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: space-between;
+    position: fixed;
+    height: 4em;
+    top: 0em;
+    z-index: 1000;
+}
+
+nav .left a {
+    color: white;
+    background-color: rgba(255, 255, 255, 0.219);
+    backdrop-filter: blur(5px);
+    border-radius: 20px;
+    text-shadow: 10px 10px 10px rgba(0, 0, 0, 0.2);
+    font-weight: normal;
+    font-size: 1.25rem;
+    margin-left: 1em;
+    text-decoration: none;
+    padding: .5em;
+    transition: background-color .5s ease;
+}
+
+nav .left a:hover {
+    background-color: rgba(255, 255, 255, 0.582);
+}
+
 .stop-watch-box {
     background-image: url(/images/beach.jpg);
     background-size: cover;
